@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Text, View, StyleSheet, Button } from 'react-native';
 import { BarCodeScanner } from 'expo-barcode-scanner';
+import React, {Component} from 'react';
+import {Alert, Button, Stylesheet, View} from 'react-native';
 
 export default function App() {
   const [hasPermission, setHasPermission] = useState(null);
@@ -56,12 +58,23 @@ export default function App() {
   );
 }
 
-<Button
-  onPress={() => {
-    console.log('Saving container...');
-  }}
-  title="Press to save box"
-  />
+export default class ButtonBasics extends Component {
+  _onPressButton() {
+    Alert.alert('Scanning container...');
+  }
+}
+
+render() {
+  return (
+    <View style={styles.container}>
+      <View style={styles.buttonContainer}>
+        <Button onPress={this._onPressButton} title="Tap here to scan"
+        color='lightcyan'
+        />
+      </View>
+      </View>
+  )
+}
 
 const Flex = () => {
   return (
@@ -98,5 +111,8 @@ const styles = StyleSheet.create({
     overflow: 'hidden',
     borderRadius: 30,
     backgroundColor: 'tomato'
+  },
+  buttonContainer: {
+    margin: 20,
   }
 });
