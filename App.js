@@ -59,19 +59,7 @@ export default function App() {
 
 
 
-const Flex = () => {
-  return (
-          <View
-              style = {[
-                  styles.container,
-                  {
-                      flexDirection: 'column',
-                  },
-              ]}>
-              <View style={{flex: 1, backgroundColor: 'aqua'}}/>
-          </View>
-  );
-};
+
 
 
 const styles = StyleSheet.create({
