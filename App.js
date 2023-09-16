@@ -56,12 +56,28 @@ export default function App() {
   );
 }
 
+const Flex = () => {
+  return (
+          <View
+              style = {[
+                  styles.container,
+                  {
+                      flexDirection: 'column',
+                  },
+              ]}>
+              <View style={{flex: 1, backgroundColor: 'aqua'}}/>
+          </View>
+  );
+};
+
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: 'lightcyan',
     alignItems: 'center',
     justifyContent: 'center',
+    padding: 20,
   },
   maintext: {
     fontSize: 16,
