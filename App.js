@@ -56,6 +56,13 @@ export default function App() {
   );
 }
 
+<Button
+  onPress={() => {
+    console.log('Saving container...');
+  }}
+  title="Press to save box"
+  />
+
 const Flex = () => {
   return (
           <View
@@ -74,7 +81,7 @@ const Flex = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'aqua',
+    backgroundColor: 'lightseagreen',
     alignItems: 'center',
     justifyContent: 'center',
     padding: 20,
